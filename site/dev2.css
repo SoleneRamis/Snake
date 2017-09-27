@@ -1,0 +1,27 @@
+@media screen {
+ 
+body{
+	background-image: url(fond.jpg);
+	margin-top: 0px;
+	margin: 0px;
+	display: block;
+	}
+
+
+#headers li a:hover{
+	background-color: #170D03;
+	opacity: 0.9;
+}
+
+p{
+	margin-left: 55px;
+	margin-right: 55px;
+}
+
+#conteneur{
+margin: auto;
+margin-right: auto;
+margin-top: auto;
+max-width:100% ;
+}
+}

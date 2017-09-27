@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" media="screen" href="dev3.css" type="text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+</head>
+
+
+<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	
+<div id="conteneur">
+	
+	<img id="banniere" src="banniere.jpg" alt="Bannière" style="width:100%;height:100%;"/>
+
+
+ 
+<header id="headers" class="">
+
+	<ul id="dropdown1" class="brown darken-4 dropdown-content">
+  		<li><a class="white-text" href="dev1.html">Description des fonctionnalités</a></li></a></li>
+  		<li><a class="white-text" href="dev2.html">Présentation structure interne</a></li>
+  		<li class="divider"></li>
+  		<li><a class="white-text" href="dev3.html">Explication des données</a></li>
+	</ul>
+<nav>
+  <div  class=" brown darken-4 nav-wrapper">
+    <a href="accueil.html" class="brand-logo ">&nbsp;&nbsp;ACCUEIL</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="introduction.html">INTRODUCTION</a></li>
+      
+      <li><a class="dropdown-button" href="" data-activates="dropdown1">DEVELOPPEMENT<i class="material-icons right">arrow_drop_down</i></a></li>
+
+      <li><a href="conclusion.html">CONCLUSION &nbsp;</a></li>
+    </ul>
+  </div>
+</nav>
+
+</header>
+
+
+<script>
+
+$(document).ready(function(){
+    
+	$(".dropdown-button").dropdown({
+      	inDuration: 300,
+      	outDuration: 225,
+      	constrain_width: true, // Does not change width of dropdown to that of the activator
+      	hover: true, // Activate on hover
+      	gutter: 0, // Spacing from edge
+      	belowOrigin: true, // Displays dropdown below the button
+      	alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  	);
+       
+});
+        
+</script>
+ <center><img src="exploitdonnees.png "style="width:850px;height:120px;"/></center>
+
+<p>
+Le serpent est stocké dans 2 structures. 
+<br>
+La première contient les informations relatives à la tête: coordonnée sur X et Y, ainsi que la direction du serpent (derrière les touches directionnelles utilisées par l'utilisateur, la direction est en base 2 vers la droite) et sa taille. 
+<br>
+La deuxième structure contient les coordonées X et Y d'une case du corps dont l'ensemble des cases est stocké dans un tableau de struct.
+<br>
+Les pommes sont stockées dans un tableau de struct (comme le corps du serpent) contenant les coordonnées X et Y de chaque pomme dans chacune de ses cases.
+<br>
+L'escargot et les ciseaux sont également stockés danse des structures contenant leurs coordonnées X et Y respectives.
+</p>	
+<br>
+<br>
+<center><img src="snake.png" style="width:550px;height:35px;"/>
+  <img src="z_pomme.png "style="width:30px;height:30px;"/></center>
+</div>
+</body>
+</html>

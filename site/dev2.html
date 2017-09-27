@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" media="screen" href="dev2.css" type="text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+</head>
+
+
+<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	
+<div id="conteneur">
+	
+
+<img id="banniere" src="banniere.jpg" alt="Bannière" style="width:100%;height:100%;"/> 
+
+ 
+<header id="headers" class="">
+
+	<ul id="dropdown1" class="brown darken-4 dropdown-content">
+  		<li><a class="white-text" href="dev1.html">Description des fonctionnalités</a></li></a></li>
+  		<li><a class="white-text" href="dev2.html">Présentation structure interne</a></li>
+  		<li class="divider"></li>
+  		<li><a class="white-text" href="dev3.html">Explication des données</a></li>
+	</ul>
+<nav>
+  <div  class=" brown darken-4 nav-wrapper">
+    <a href="accueil.html" class="brand-logo ">&nbsp;&nbsp;ACCUEIL</a>
+     <ul class="right hide-on-med-and-down">
+      <li><a href="introduction.html">INTRODUCTION</a></li>
+      
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">DEVELOPPEMENT<i class="material-icons right">arrow_drop_down</i></a></li>
+
+      <li><a href="conclusion.html">CONCLUSION &nbsp;</a></li>
+    </ul>
+  </div>
+</nav>
+
+</header>
+
+
+<script>
+
+$(document).ready(function(){
+    
+	$(".dropdown-button").dropdown({
+      	inDuration: 300,
+      	outDuration: 225,
+      	constrain_width: true, // Does not change width of dropdown to that of the activator
+      	hover: true, // Activate on hover
+      	gutter: 0, // Spacing from edge
+      	belowOrigin: true, // Displays dropdown below the button
+      	alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  	);
+       
+});
+        
+</script>
+ <center><img src="presentstruc.png "style="width:1200px;height:120px;"/></center>
+
+<p>
+<p>
+Le programme est divisé en 9 fonctions :
+</p>
+
+<p>
+   - Menu :
+<br>
+   Cette fonction permet d'afficher un écran d'accueil où le joueur peut choisir de commencer le jeu, accéder aux règles ou de quitter le programme.
+</p>
+
+<p>
+   - Règles :
+<br>
+    Cette fonction permet d'afficher un écran d'explication du jeu, contenant aussi un bouton permettant de retourner au menu.
+</P>
+
+<p>
+   - Déplacement :
+<br>
+   Cette fonction permet de mettre à jour la position du serpent par rapport à la direction choisie par le joueur (à l'aide des flèches).
+</p>
+
+<p>
+   - TestPosS :
+<br>
+    Cette fonction permet de tester la case où la tête du serpent se trouve (après le dépacement) afin de réagir aux pommes, aux ciseaux, aux escargots, ainsi qu'à une sortie d'écran et au fait que le serpent se mange lui-même. Il y a donc ici une influence sur la taille du serpent en rapport avec le score, sa vitesse et sa vie. 
+<br>
+    En effet, si le serpent se mange lui-même ou s'il sort de l'écran, alors il meurt et la fonction arrète le déroulement du jeu pour envoyer un "GameOver".
+</p>
+
+<p>
+   - Afficher :
+<br>
+    Cette fonction permet de mettre à jour l'écran du jeu et d'afficher le serpent ainsi que les 5 pommes, les ciseaux et l'escargot.
+</p>
+
+<p>
+   - Pomme :
+<br>
+   Cette fonction permet de créer des coordonnées aléatoires pour une pomme, qui est appelée 5 fois au début du jeu puis 1 fois chaque fois que le serpent en mange une.
+</p>
+
+<p>
+   - CreerEscargotCiseaux :
+<br>
+   Cette fonction permet de créer des coordonnées aléatoires pour un escagot ou des ciseaux qui est appelée 1 fois chaque fois que le serpent en mange.
+</p>
+
+<p>
+   - GameOver :
+<br>
+   Cette fonction permet d'afficher une page qui redirige le joueur vers le menu ou lui permet de relancer le jeu après avoir perdu.
+</p>
+
+<p>
+   - Jeu :
+<br>
+   C'est la fonction principale du jeu où toutes les autres sont appelées dans une boucle qui tourne tant que le joueur n'appuie pas sur "escape".
+</p>
+
+<p>
+   - Main :
+<br>
+    Cette fonction est le coeur du programme. Celle que le programme appelle dès qu'il se lance et qui appelle ensuite la fonction "Menu" pour rediriger le joueur.
+</p>	
+<br>
+<br>
+<center><img src="menu.jpg" style="width:550px;height:300px;"/>
+<br>
+Menu
+</center>
+<br>
+<br>
+<center><img src="regles.jpg" style="width:500px;height:350px;"/>
+<br>
+Règles
+</center>
+<br>
+<br>
+<center><img src="game_over.jpg" style="width:500px;height:350px;"/>
+<br>
+Game over
+</div>
+</body>
+</html>

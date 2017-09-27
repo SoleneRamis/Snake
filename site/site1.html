@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" media="screen" href="1.css" type="text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+</head>
+
+
+<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	
+<div id="conteneur">
+	
+	<div id="banniere"></div>
+
+ 
+<header id="headers" class="">
+
+	<ul id="dropdown1" class="brown darken-4 dropdown-content">
+  		<li><a class="white-text" href="dev1.html">Description fonctionnalités</a></li></a></li>
+  		<li><a class="white-text" href="dev2.html">Présentation structure interne</a></li>
+  		<li class="divider"></li>
+  		<li><a class="white-text" href="dev3.html">Explication des données</a></li>
+	</ul>
+<nav>
+  <div  class=" brown darken-4 nav-wrapper">
+    <a href="accueil.html" class="brand-logo ">&nbsp;&nbsp;ACCUEIL</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="introduction.html">INTRODUCTION</a></li>
+      
+      <li><a class="dropdown-button" href="" data-activates="dropdown1">DEVELOPPEMENT<i class="material-icons right">arrow_drop_down</i></a></li>
+
+      <li><a href="conclusion.html">CONCLUSION &nbsp;</a></li>
+    </ul>
+  </div>
+</nav>
+
+</header>
+
+
+<script>
+
+$(document).ready(function(){
+    
+	$(".dropdown-button").dropdown({
+      	inDuration: 300,
+      	outDuration: 125,
+      	constrain_width: true, // Does not change width of dropdown to that of the activator
+      	hover: true, // Activate on hover
+      	gutter: 0, // Spacing from edge
+      	belowOrigin: true, // Displays dropdown below the button
+      	alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  	);
+       
+});
+        
+</script>
+        
+
+</div>
+</main>
+
+</body>
+</html>
+
+
+

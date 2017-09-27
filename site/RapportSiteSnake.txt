@@ -1,0 +1,46 @@
+Intro:
+
+Le joueur contrôle une longue et fine créature semblable à un serpent(d'où le nom snake).
+L'objectif est de manger des pommes afin d'agrandir le serpent tout en restant dans les limites du terrain et en évitant de se manger lui-même.
+Options du jeu:
+	*manger des ciseaux reduit la taille du serpent de 4 segments et le score de 4 points;
+	*manger des escargots réduit la vitesse du serpent;
+	*manger des pommes augmente la taille du serpent de 2 segments et le score de 2 points;
+
+
+Fonctionnalités:
+
+Le serpent est dépalcé à l'aide des fleches directionnelles, il n'est pas possible d'effectuer un demi-tour avec le serpent. Puis, lorsque le joueur appuie sur la touche qui est dans la même direction que le serpent (ex: le serpent vas vers le haut et le joueur appuie sur la touche "up"), la vitesse du serpent augmente.
+Lorsque la tête du serpent est sur la même case qu'une pomme, la taille du serpent augmente de 2 segements et la pomme disparait pour réaparaître sur une case de coordonnées aléatoires.
+De plus, lorsque le serpent "mange" un escargot, sa vitesse diminue, en revanche, s'il "mange" des ciseaux, sa taille rétrécie de 4 cases (de même que le score).
+Un pression sur la touche "space" met le jeu en pause, il faut rappuyer dessus pour quitter le mode de pause.
+La touche "escape" permet de retourner au menu d'accueil du jeu (il est possible d'utiliser la touche "escape" en mode pause).
+Si le serpent sort de l'écran ou qu'il se "mange lui-même", le joueur perd et un écran de "GameOver" lui permet de rejouer ou de quitter le jeu (et donc revenir au menu principal).
+
+
+Structure:
+
+LE programme est divisé en 9 fonctions:
+   *Menu -> Cette fonction permet d'afficher un écran d'accueil où le joueur peut choisir de rentrer dans le jeu, de quitter le programme ou d'accéder aux règles.
+   *Règles -> Cette fonction permet d'afficher un écran d'explication des règles du jeu , elle contient aussi un bouton (rond rouge avec une croix blanche) qui permet de retourner au menu.
+   *Déplacement -> Cette fonction permet de mettre a jour la position du serpent par rapport à la direction choisie par le joueur (à l'aide des fleches).
+   *TestPosS -> Cette fonction permet de tester (d'où sont nom) la case sur laquelle la tête du serpent se trouve (après le dépacement) afin de réagir aux pomes, ciseaux,escargots ainsi qu'a une sortie d'écrant et au faite que le serpent se mange lui-même. Il y a donc, ici, une influence sur la taille du serpent (qui implique le score), sa vitesse et sa "vie", en effet, si le serpent se "mange" lui-même ou qu'il sort de l'écran, il "meure"et, la fonction arrète le déroulement du jeu pour envoyer un "GameOver".
+   *Afficher -> Cette fonction permet de mettre à jour l'écran de jeu, et donc d'afficher le serpent (tête et corps) ansi que les 5 pommes, les ciseaux et l'escargot.
+   *Pomme -> Cette fonction permet de créer des coordonnées aléatoir pour une pomme( elle est appelée 5 fois au début du jeu puis 1 fois chaque fois que le serpent en mange une).
+   *GameOver -> Cette fonction permet d'afficher une page qui redirige le joueur vers le menu ou lui permet de relancer le jeu après avoir perdu.
+   *Jeu -> Cette fonction est la fonction principale du jeu où toutes les autres sont appelées dans une boucle qui tourne tant que le joueur n'appuie pas sur "escape".
+   *main -> Cette fonction est le coeur du programme, celle que le programme appèle dès qu'il se lance, et qui appèle la fonction Menu pour redirigé le joueur.
+
+
+Explication des stockages:
+
+Le serpent est stocké dans 2 structures, la première contient les information relatives à la tête: coordonnée sur X et Y; ainsi que la direction du serpent (derière touche directionnelle utilisé par l'utilisateur, la direction est de base 2, soit vers la droite) et sa taille. La deuxième structure contient les coordonées X et Y d'une case du corps (l'ensemble des case étant stocké dans un tableau, soit un tableau de struct).
+Les pommes sont stockés sur un tableau de struct (comme le corps du serpent) contenant les coordonnées X et Y de chaque pomme dans chaqu'une de ses cases.
+L'escargot et les ciseaux sont égallement stockés sur des structures  contenant leurs coordonnées X et Y respectives.
+
+
+Conclusion:
+
+Aurélien => C'était un projet très intéressant, l'utilisation des stuctures (et des tableaux de struct) m'a permis de m'améliorer en programmation C. ^^
+
+Solène => #aFaireChezToiMDR!!!

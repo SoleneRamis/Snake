@@ -1,0 +1,37 @@
+</script>
+        
+<main>       
+	<div id="menu" class="center-align">
+	<ul>
+		<li>
+		<a href="#">ACCUEIL</a>
+		</li>
+	</ul>
+	
+	<ul>
+		<li>
+		<a href="#">INTRODUCTION</a>
+		</li>
+	</ul>
+
+	<ul>
+		<li>
+		<a href="#">DEVELOPPEMENT</a>
+		
+		<ul>
+		<p>
+		<li><a id="lien1" href="#">Description fonctionnalités</a></li>
+		<li><a id="lien2" href="#">Présentation structure interne</a></li>
+		<li><a id="lien3" href="#">Explication des données</a></li>
+		</p>
+		</ul>
+
+
+		</li>
+	</ul>
+
+		<ul>
+		<li>
+		<a href="#">CONCLUSION</a>
+		</li>
+	</ul></div> 

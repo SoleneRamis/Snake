@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" media="screen" href="dev1.css" type="text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+</head>
+
+
+<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	
+<div id="conteneur">
+	
+	<img id="banniere" src="banniere.jpg" alt="Bannière" style="width:100%;height:100%;"/> 
+
+ 
+<header id="headers" class="">
+
+	<ul id="dropdown1" class="brown darken-4 dropdown-content">
+  		<li><a class="white-text" href="dev1.html">Description des fonctionnalités</a></li></a></li>
+  		<li><a class="white-text" href="dev2.html">Présentation structure interne</a></li>
+  		<li class="divider"></li>
+  		<li><a class="white-text" href="dev3.html">Explication des données</a></li>
+	</ul>
+<nav>
+  <div  class=" brown darken-4 nav-wrapper">
+    <a href="accueil.html" class="brand-logo ">&nbsp;&nbsp;ACCUEIL</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="introduction.html">INTRODUCTION</a></li>
+      
+      <li><a class="dropdown-button" href="" data-activates="dropdown1">DEVELOPPEMENT<i class="material-icons right">arrow_drop_down</i></a></li>
+
+      <li><a href="conclusion.html">CONCLUSION &nbsp;</a></li>
+    </ul>
+  </div>
+</nav>
+
+</header>
+
+
+<script>
+
+$(document).ready(function(){
+    
+	$(".dropdown-button").dropdown({
+      	inDuration: 300,
+      	outDuration: 225,
+      	constrain_width: true, // Does not change width of dropdown to that of the activator
+      	hover: true, // Activate on hover
+      	gutter: 0, // Spacing from edge
+      	belowOrigin: true, // Displays dropdown below the button
+      	alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  	);
+       
+});
+        
+</script>
+ 
+ <center><img src="desfonc.png "style="width:1200px;height:120px;"/></center>
+
+<p>
+Le serpent est déplacé à l'aide des flèches directionnelles. Il n'est pas possible d'effectuer un demi-tour avec le serpent. 
+<br>
+Lorsque le joueur appuie sur la touche qui est dans la même direction que le serpent (ex: le serpent va vers le haut et le joueur appuie sur la touche "up"), la vitesse du serpent augmente.
+Ensuite, quand la tête du serpent est sur la même case qu'une pomme, la taille du serpent augmente de 2 segments puis la pomme disparait pour réapparaître sur une case de coordonnées aléatoires.
+De plus, lorsque le serpent mange un escargot, sa vitesse diminue.
+<br>
+En revanche, s'il mange des ciseaux, sa taille rétrécie de 4 segments, de même que le score diminue de 4 points du joueur.
+<br>
+Une pression sur la touche "space" met le jeu en pause, il faut appuyer à nouveau sur cette touche pour quitter le mode pause.
+<br>
+La touche "escape" permet de revenir au menu d'accueil du jeu (il est possible d'utiliser la touche "escape" en mode pause).
+<br>
+Si le serpent sort de l'écran ou s'il se mort la queue, alors le joueur perd. Un écran "GameOver" s'affichera où il lui sera possible de rejouer ou de revenir au menu principal.
+
+</p>	
+
+</div>
+
+</body>
+</html>
+
+
+
